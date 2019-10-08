@@ -1,0 +1,43 @@
+div {
+    border: 1px solid black;
+}
+
+#geral {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.produto {
+    height: auto;
+    width: 200px;
+    padding: 10px;
+    /*border: 1px solid black;*/
+}
+
+.imagem {
+    width: auto;
+    height: 250px;
+    margin: auto;
+    text-align: center;
+}
+
+img {
+    width: auto;
+    height: 100%;
+    text-align: center;
+}
+
+.nome-livro, .autor, .preco {
+    margin-top: 5px;
+    text-align: center;
+    height: auto;
+}
+
+p{
+    margin: auto;
+}
