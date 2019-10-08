@@ -3,31 +3,31 @@
     "titulo": " Dom Quixote",
     "autor": "Miguel de Cervantes",
     "paginas": "1605",
-    "preço": "R$9,95"
+    "preco": "R$9,95"
   },
 
   {
     "titulo": "Guerra e Paz",
-    "autor": "Liev Tolstói",
+    "autor": "Liev Tolstï¿½i",
     "paginas": "1869",
-    "preço": "R$71,90"
+    "preco": "R$71,90"
 
   },
 
 
   {
-    "titulo": "A Montanha Mágica",
+    "titulo": "A Montanha Mï¿½gica",
     "autor": "Thomas Mann",
     "paginas": "1924",
-    "preço": "R$56,94"
+    "preco": "R$56,94"
   },
 
 
   {
-    "titulo": "Cem Anos de Solidão",
-    "autor": "Gabriel García Márquez",
+    "titulo": "Cem Anos de Solidï¿½o",
+    "autor": "Gabriel Garcï¿½a Mï¿½rquez",
     "paginas": "1967",
-    "preço": "R$33,28"
+    "preco": "R$33,28"
 
   },
 
@@ -35,21 +35,21 @@
     "titulo": "Ulisses",
     "autor": "James Joyce",
     "paginas": "1922",
-    "preço": "R$47,05"
+    "preco": "R$47,05"
   },
 
   {
     "titulo": "Em Busca do Tempo Perdido",
     "autor": " Marcel Proust",
     "paginas": "1913",
-    "preço": "R$ 42,90"
+    "preco": "R$ 42,90"
   },
 
   {
-    "titulo": "A Divina Comédia",
+    "titulo": "A Divina Comï¿½dia",
     "autor": "Dante Alighieri",
     "paginas": "1321",
-    "preço": "R$ 66,74"
+    "preco": "R$ 66,74"
   }
 
 ]
