@@ -32,7 +32,7 @@ img {
     text-align: center;
 }
 
-.nome-livro, .autor, .preco {
+.nome-livro, .autor, .preco, .add-carrinho {
     margin-top: 5px;
     text-align: center;
     height: auto;
