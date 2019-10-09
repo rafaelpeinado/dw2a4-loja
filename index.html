@@ -2,40 +2,29 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> 
     <title>Página Inicial</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
-    <!--<script src="javascript/javascript.js"></script>-->
+    <script src="javascript/javascript.js"></script>
     <script src="jquery/jquery-3.4.1.min.js"></script>
 </head>
 <body>
     <header>
-        
+        <div id="cabecalho">
+            <div>NOME</div>
+            <div>BARRA BUSCA</div>
+            <div><img id="cart" src="images/cart.png"></div>
+        </div>
     </header>
     <nav>
-
+        <div id="navegacao">
+            MENU
+        </div>
     </nav>
     <section>
         <div id="geral">
-            <div class="container">
-                <!--<div class="produto">
-                    <div class="imagem">
-                        <img src="images/imagem.jpg">
-                    </div>
-                    <div class="nome-livro">
-                        <span>Nome Livro</span>
-                    </div>
-                    <div class="autor">
-                            <span>Autor</span>
-                        </div>
-                    <div class="preco">
-                        <span>R$ 9,95</span>
-                    </div>
-                    <div class="add-carrinho">
-                        <a href="#">Adicionar ao carrinho</a>
-                    </div>
-                </div>-->
-            </div>
+            <div class="container"></div>
         </div>
         <script>
             console.log($.getJSON('json/loja.json', function(data){}));
@@ -44,7 +33,7 @@
                 $.each(data, function(i, livro) {
                     item = "<div class='produto'>" + 
                                 "<div class='imagem'>" +
-                                    "<img src='images/imagem.jpg'>" + 
+                                    "<img src='" + livro.capa + "'>" + 
                                 "</div>" + 
                                 "<div class='nome-livro'>" +
                                     "<span>" + livro.titulo + "</span>" + 
@@ -56,7 +45,7 @@
                                     "<span>" + livro.preco + "</span>" +
                                 "</div>" +
                                 "<div class='add-carrinho'>" +
-                                    "<a href='#'>Adicionar ao carrinho</a>" +
+                                    "<a href='#'><span class='texto-carrinho'>Adicionar ao carrinho</span></a>" +
                                 "</div>" +
                             "</div>";
                     $(".container").append(item);
@@ -66,7 +55,10 @@
     
     </section>
     <footer>
-
+        <div id="rodape">
+            <span>&#169; 2019-2019 - Instituto Federal de São Paulo</span>
+            <small>Rua Pedro Vicente, nº 625 - Canindé - São Paulo - SP - CEP: 01109-010</small>
+        </div>
     </footer>
 
 

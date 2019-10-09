@@ -3,31 +3,34 @@
     "titulo": " Dom Quixote",
     "autor": "Miguel de Cervantes",
     "paginas": "1605",
-    "preco": "R$9,95"
+    "preco": "R$ 34,90",
+    "capa": "images/dom_quixote.jpg"
   },
 
   {
     "titulo": "Guerra e Paz",
-    "autor": "Liev Tolst�i",
+    "autor": "Leon Tolstoi",
     "paginas": "1869",
-    "preco": "R$71,90"
-
+    "preco": "R$ 30,90",
+    "capa": "images/guerra_paz.jpg"
   },
 
 
   {
-    "titulo": "A Montanha M�gica",
+    "titulo": "A Montanha Mágica",
     "autor": "Thomas Mann",
     "paginas": "1924",
-    "preco": "R$56,94"
+    "preco": "R$ 94,90",
+    "capa": "images/montanha_magica.jpg"
   },
 
 
   {
-    "titulo": "Cem Anos de Solid�o",
-    "autor": "Gabriel Garc�a M�rquez",
+    "titulo": "Cem Anos de Solidão",
+    "autor": "Gabriel García Márquez",
     "paginas": "1967",
-    "preco": "R$33,28"
+    "preco": "R$ 59,90",
+    "capa": "images/cem_anos_solidao.jpg"
 
   },
 
@@ -35,21 +38,24 @@
     "titulo": "Ulisses",
     "autor": "James Joyce",
     "paginas": "1922",
-    "preco": "R$47,05"
+    "preco": "R$ 129,90",
+    "capa": "images/ulisses.jpg"
   },
 
   {
     "titulo": "Em Busca do Tempo Perdido",
     "autor": " Marcel Proust",
     "paginas": "1913",
-    "preco": "R$ 42,90"
+    "preco": "R$ 20,90",
+    "capa": "images/busca_tempo_perdido.jpg"
   },
 
   {
-    "titulo": "A Divina Com�dia",
+    "titulo": "A Divina Comédia",
     "autor": "Dante Alighieri",
     "paginas": "1321",
-    "preco": "R$ 66,74"
+    "preco": "R$ 115,00",
+    "capa": "images/divina_comedia.jpg"
   }
 
 ]
