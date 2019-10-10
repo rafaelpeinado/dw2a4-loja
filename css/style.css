@@ -1,6 +1,7 @@
 body{
     font-family: 'Ubuntu', sans-serif;
     background-color: #EFEFEF;
+    min-width: 250px;
 }
 
 header, footer, nav, section {
@@ -38,10 +39,35 @@ div#geral {
     height: 65px;
 }
 
+#livraria {
+    height: 60px;
+    width: auto;
+}
+
+#busca {
+    height: 25px;
+    padding: 5px;
+    margin: 13px 0px;
+    width: 75%;
+}
+
+#botao-busca {
+    height: 39px;
+    margin: 13px 0px;
+    text-align: center;
+    padding: 0px;
+}
+
+#botao-busca img{
+    height: 14px;
+    width: 14px;
+    text-align: center;
+}
+
 #cart {
     height: auto;
     width: 33px;
-    padding: 13px 0px;
+    margin: 13px 0px;
 }
 
 #rodape {
@@ -60,6 +86,33 @@ div#geral {
 
 #navegacao {
     height: 50px;
+}
+
+ul {
+    padding:0px;
+    margin:0px;
+    list-style:none;
+    height: 100%;
+}
+
+ul li { 
+    display: inline; 
+}
+
+ul li a {
+    padding: 2px 10px;
+    display: inline-block;
+    padding: 15px;
+
+    /* visual do link */
+    color: #333;
+    text-decoration: none;
+}
+
+#menu ul li a:hover {
+    background-color:#D6D6D6;
+    color: #6D6D6D;
+    border-bottom:3px solid #EA0000;
 }
 
 #geral, #cabecalho, #rodape, #navegacao {
@@ -127,4 +180,22 @@ div#geral {
 .preco {
     font-size: 18px;
     font-weight: bold;
+}
+
+@media only screen and (max-width: 953px){
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 717px){
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 482px){
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
