@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -21,15 +21,16 @@
             </div>
             <div>
                 <img id="cart" src="images/cart.png">
+                <span id="qtdeCart">0</span>
             </div>
         </div>
     </header>
     <nav>
         <div id="navegacao">
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Equipe</a></li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
             </ul>
         </div>
     </nav>
@@ -38,11 +39,11 @@
             <div class="container"></div>
         </div>
         <script>
-            console.log($.getJSON('json/loja.json', function(data){}));
             $.getJSON('json/loja.json', function(data) {
                 var item;
+                
                 $.each(data, function(i, livro) {
-                    item = "<div class='produto'>" + 
+                    item = "<div class='produto' id='livro" + livro.id + "'>" + 
                                 "<div class='imagem'>" +
                                     "<img src='" + livro.capa + "'>" + 
                                 "</div>" + 
@@ -56,7 +57,7 @@
                                     "<span>" + livro.preco + "</span>" +
                                 "</div>" +
                                 "<div class='add-carrinho'>" +
-                                    "<a href='#'><span class='texto-carrinho'>Adicionar ao carrinho</span></a>" +
+                                    "<a onclick='adicionarCarrinho(" + livro.id + ");' href='#'><span class='texto-carrinho'>Adicionar ao carrinho</span></a>" +
                                 "</div>" +
                             "</div>";
                     $(".container").append(item);

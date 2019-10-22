@@ -70,6 +70,16 @@ div#geral {
     margin: 13px 0px;
 }
 
+#qtdeCart {
+    background-color: #EA0000;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    color: #FFFFFF;
+    font-size: 12px;
+}
+
 #rodape {
     text-align: center;
     display: grid;
