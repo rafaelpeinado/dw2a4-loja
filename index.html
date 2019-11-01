@@ -20,7 +20,7 @@
                 <button id="botao-busca"><img src="images/lupa.png"></button>
             </div>
             <div>
-                <img id="cart" src="images/cart.png">
+                <a href="carrinho.html"><img id="cart" src="images/cart.png"></a>
                 <span id="qtdeCart">0</span>
             </div>
         </div>
@@ -36,7 +36,9 @@
     </nav>
     <section>
         <div id="geral">
-            <div class="container"></div>
+            <div class="container">
+                <div id="index"></div>
+            </div>
         </div>
         <script>
             $.getJSON('json/loja.json', function(data) {
@@ -54,13 +56,13 @@
                                         "<span>" + livro.autor + "</span>" +
                                     "</div>" +
                                 "<div class='preco'>" + 
-                                    "<span>" + livro.preco + "</span>" +
+                                    "<span> R$ " + livro.preco + "</span>" +
                                 "</div>" +
                                 "<div class='add-carrinho'>" +
                                     "<a onclick='adicionarCarrinho(" + livro.id + ");' href='#'><span class='texto-carrinho'>Adicionar ao carrinho</span></a>" +
                                 "</div>" +
                             "</div>";
-                    $(".container").append(item);
+                    $("#index").append(item);
                 });
             });
         </script>

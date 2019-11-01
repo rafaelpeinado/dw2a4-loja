@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> 
+    <title>Página Inicial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <script src="javascript/javascript.js"></script>
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <header>
+        <div id="cabecalho">
+            <div>
+                <a href="index.html"><img id="livraria" src="images/livraria.png"></a>
+            </div>
+            <div id="div-busca">
+                <input id="busca" type="text" placeholder="O que você procura?">
+                <button id="botao-busca"><img src="images/lupa.png"></button>
+            </div>
+            <div>
+                <a href="carrinho.html"><img id="cart" src="images/cart.png"></a>
+                <span id="qtdeCart">0</span>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div id="navegacao">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        <div id="geral">
+            <div class="container">
+                <div id="carrinho">
+                    <div>
+                        <h2>Meu Carrinho</h2>
+                    </div>
+                    <div>
+                        <table id="lista-carrinho">
+                            <tr>
+                                <th></th>
+                                <th>Item</th>
+                                <th>Preço</th>
+                                <th>Quantidade</th>
+                                <th>Subtotal</th>
+                                <th></th>
+                            </tr>
+                        </table>                 
+                    </div>
+                    <div id="confirmar-compra">
+                        <a href="#">Confirmar Compra</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script>
+                $.getJSON('json/loja.json', function(data) {
+                    var item;
+                    
+                    $.each(data, function(i, livro) {
+                        item = "<tr class='produto' id='livro" + livro.id + "'>" + 
+                                    "<td class='imagem'>" +
+                                        "<img src='" + livro.capa + "'>" + 
+                                    "</td>" + 
+                                    "<td class='nome-livro'>" +
+                                        "<span>" + livro.titulo + "</span>" + 
+                                    "</td>" +
+                                    "<td class='preco'>" +
+                                            "<span> R$ " + livro.preco + "</span>" +
+                                        "</td>" +
+                                    "<td class='quantidade'>" + 
+                                        "<span>" + 2 + "</span>" +
+                                    "</td>" +
+                                    "<td class='subtotal'>" + 
+                                        "<span>R$ " + (((parseFloat(livro.preco.replace(',', '.')))*2).toFixed(2)).toString().replace('.', ',') + "</span>" +
+                                    "</td>" +
+                                    "<td class='add-carrinho'>" +
+                                        "<a onclick='removerCarrinho(" + livro.id + ");' href='#'><span class='texto-carrinho'>x</span></a>" +
+                                    "</td>" +
+                                "</tr>";
+                        $("#lista-carrinho").append(item);
+                    });
+                });
+            </script>
+    </section>
+    <footer>
+        <div id="rodape">
+            <span>&#169; 2019-2019 - Instituto Federal de São Paulo</span>
+            <small>Rua Pedro Vicente, nº 625 - Canindé - São Paulo - SP - CEP: 01109-010</small>
+        </div>
+    </footer>
+
+
+</body>
+</html>

@@ -72,12 +72,14 @@ div#geral {
 
 #qtdeCart {
     background-color: #EA0000;
-    border-radius: 10px;
+    border-radius: 50%;
     padding: 5px;
     margin-bottom: 5px;
     margin-top: 0px;
     color: #FFFFFF;
     font-size: 12px;
+    position: absolute;
+    top: 40px;
 }
 
 #rodape {
@@ -130,82 +132,118 @@ ul li a {
     margin: auto;
 }
 
-.container {
+#index {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px;
 }
 
-.produto {
+div.produto {
     height: 300px;
     padding: 10px;
     background-color: white;
 }
 
-.imagem {
+div.imagem {
     width: auto;
     height: 175px;
     margin: auto;
     text-align: center;
 }
 
-.add-carrinho {
+div.add-carrinho {
     height: 20px;
     border-radius: 5px;
     padding: 10px;
     border: 1px solid black;
 }
 
-.add-carrinho a {
+div.add-carrinho a {
     text-decoration: none;
     color: black;
 }
 
-.texto-carrinho {
+div.texto-carrinho {
     text-transform: uppercase;
     font-size: 12px;
 }
 
-.imagem img {
+div.imagem img {
     width: auto;
     max-height: 100%;
     text-align: center;
 }
 
-.nome-livro, .autor, .preco, .add-carrinho {
+div.nome-livro, div.autor, div.preco, div.add-carrinho {
     text-align: center;
     padding: 5px;
     height: auto;
 }
 
-.nome-livro {
+div.nome-livro {
     font-size: 14px;
     font-weight: bold;
 }
 
-.autor {
+div.autor {
     font-size: 11px;
 }
 
-.preco {
+div.preco {
     font-size: 18px;
     font-weight: bold;
 }
 
+#carrinho {
+    background-color: #FFFFFF;
+    padding: 10px;
+}
+
+#confirmar-compra a {
+    
+}
+
+
+#lista-carrinho {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, tr {
+    text-align: center;
+}
+
+td.imagem {
+    width: auto;
+    height: 100px;
+    margin: auto;
+    text-align: center;
+}
+
+td.imagem img {
+    width: auto;
+    max-height: 100%;
+    text-align: center;
+}
+
+table, tr, td, th {
+    border: 1px solid black;
+}
+
 @media only screen and (max-width: 953px){
-    .container {
+    #index {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media only screen and (max-width: 717px){
-    .container {
+    #index {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media only screen and (max-width: 482px){
-    .container {
+    #index {
         grid-template-columns: repeat(1, 1fr);
     }
 }
