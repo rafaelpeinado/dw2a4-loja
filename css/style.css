@@ -45,7 +45,7 @@ div#geral {
 }
 
 #busca {
-    height: 25px;
+    height: 29px;
     padding: 5px;
     margin: 13px 0px;
     width: 75%;
@@ -158,13 +158,14 @@ div.add-carrinho {
     border: 1px solid black;
 }
 
+div.add-carrinho:hover {
+    background-color: #06A2AF;
+}
+
 div.add-carrinho a {
     text-decoration: none;
     color: black;
     cursor: pointer;
-}
-
-div.texto-carrinho {
     text-transform: uppercase;
     font-size: 12px;
 }
@@ -200,27 +201,34 @@ div.preco {
     padding: 10px;
 }
 
-#confirmar-compra a {
-    
+#carrinho h2 {
+    text-transform: uppercase;
+    font-size: 20px;
 }
 
 #lista-carrinho {
-    border: 1px solid black;
+    border: 1px solid #EFEFEF;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-#titulo {
+
+#titulo div{
     padding: 10px;
+    font-weight: bold;
 }
 
 .produto-carrinho {
     display: grid;
-    grid-template-columns: 2fr 3fr 2fr 2fr 2fr 1fr;
-    border: 1px solid black;
+    grid-template-columns: 2fr 3.5fr 2fr 2fr 2fr 0.5fr;
+    border: 1px solid #EFEFEF;
 }
 
 #lista-detalhes {
     display: grid;
-    grid-template-columns: 2fr 1fr;    
+    grid-template-columns: 2fr 1fr;   
+    grid-gap: 5px; 
+    
 }
 
 .imagem-carrinho {
@@ -238,37 +246,122 @@ div.preco {
 
 .quantidade-carrinho{
     display: grid;
-    grid-template-columns: repeat(3, 20px);
-    height: 20px;
+    grid-template-columns: repeat(3, 1fr);
     text-align: center;
-    padding: 10px;
 }
 
 .imagem-carrinho, .produto-carrinho, 
 .quantidade-carrinho, .nome-livro-carrinho, 
 .preco-carrinho, .subtotal-carrinho, .remover-carrinho{
     margin: auto 0px;
+    padding: 5px;
 }
 
 .quantidade-carrinho div {
     border: 1px solid black;
+    padding: 5px;
 }
 
 .menos-qtde{
     border-bottom-left-radius: 5px;;
     border-top-left-radius: 5px;
+    font-weight: bold;
+    color: #CCC;
 }
 
 .mais-qtde{
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    font-weight: bold;
+    color: #CCC;
+}
+
+.num-qtde {
+    cursor: not-allowed;
+}
+
+.menos-qtde:hover, .mais-qtde:hover{
+    background-color: #EFEFEF;
+    color: black;
 }
 
 .remover-carrinho a, .quantidade-carrinho a{
     cursor: pointer;
 }
 
+.texto-remover {
+    font-size: 25px;
+    font-weight: bold;
+    color: #CCC;
+}
+
+.texto-remover:hover{
+    color: #777;
+}
+
 #finalizacao-compra {
+    padding: 10px;
+}
+
+#valor-total{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 30px;
+}
+
+#texto-total {
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+#total {
+    text-align: right;
+    font-size: 20px;
+}
+
+#total, #texto-total {
+    font-weight: bold;
+    margin: auto 0px;
+}
+
+#comprar-mais {
+    font-size: 13px;
+    text-align: center;
+    width: 100%;
+}
+
+#comprar-mais a{
+    text-decoration: none;
+}
+
+#comprar-mais a:hover {
+    text-decoration: underline;
+}
+
+#confirmar-compra {
+    border: 1px solid #06A2AF;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #06A2AF;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#confirmar-compra:hover{
+    opacity: 85%;
+}
+
+#confirmar-compra a{
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+}
+
+#tela-total {
+    background-color: #EFEFEF;
     padding: 10px;
 }
 
