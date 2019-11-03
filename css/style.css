@@ -203,31 +203,68 @@ div.preco {
     
 }
 
-
 #lista-carrinho {
-    border-collapse: collapse;
-    width: 100%;
+    border: 1px solid black;
 }
 
-th, tr {
-    text-align: center;
+#titulo {
+    padding: 10px;
 }
 
-td.imagem {
+.produto-carrinho {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr 2fr 2fr 1fr;
+    border: 1px solid black;
+}
+
+#lista-detalhes {
+    display: grid;
+    grid-template-columns: 2fr 1fr;    
+}
+
+.imagem-carrinho {
     width: auto;
     height: 100px;
     margin: auto;
     text-align: center;
 }
 
-td.imagem img {
+.imagem-carrinho img {
     width: auto;
     max-height: 100%;
     text-align: center;
 }
 
-table, tr, td, th {
+.quantidade-carrinho{
+    display: grid;
+    grid-template-columns: repeat(3, 20px);
+    height: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+.imagem-carrinho, .produto-carrinho, 
+.quantidade-carrinho, .nome-livro-carrinho, 
+.preco-carrinho, .subtotal-carrinho, .remover-carrinho{
+    margin: auto 0px;
+}
+
+.quantidade-carrinho div {
     border: 1px solid black;
+}
+
+.menos-qtde{
+    border-bottom-left-radius: 5px;;
+    border-top-left-radius: 5px;
+}
+
+.mais-qtde{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#finalizacao-compra {
+    padding: 10px;
 }
 
 @media only screen and (max-width: 953px){

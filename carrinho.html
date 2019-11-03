@@ -41,21 +41,31 @@
                     <div>
                         <h2>Meu Carrinho</h2>
                     </div>
-                    <div>
-                        <table id="lista-carrinho">
-                            <tr>
-                                <th></th>
-                                <th>Item</th>
-                                <th>Preço</th>
-                                <th>Quantidade</th>
-                                <th>Subtotal</th>
-                                <th></th>
-                            </tr>
-                        </table>                 
+                    <div id="lista-detalhes">
+                        <div id="lista-carrinho" >
+                                <div class="produto-carrinho" id="titulo">
+                                    <div></div>
+                                    <div>Item</div>
+                                    <div>Preço</div>
+                                    <div>Quantidade</div>
+                                    <div>Subtotal</div>
+                                    <div></div>
+                                </div>                
+                        </div>
+                        <div id="finalizacao-compra">
+                            <div>
+                                <span>Total</span>
+                                <span id="total">R$ </span>
+                            </div>      
+                            <div>
+                                <a href="index.html">Comprar mais produtos</a>
+                            </div>                      
+                            <div id="confirmar-compra">
+                                <a href="#">Finalizar Pedido</a>
+                            </div>
+                        </div>
                     </div>
-                    <div id="confirmar-compra">
-                        <a href="#">Confirmar Compra</a>
-                    </div>
+                    
 
                 </div>
             </div>
@@ -63,30 +73,35 @@
         <script>
                 $.getJSON('json/loja.json', function(data) {
                     var item;
+                    var total = 0.0;
+                    var subtotal = 0.0;
                     
                     $.each(data, function(i, livro) {
-                        item = "<tr class='produto' id='livro" + livro.id + "'>" + 
-                                    "<td class='imagem'>" +
+                        subtotal = ((parseFloat(livro.preco.replace(',', '.')))*2);
+                        total += subtotal;
+                        item = "<div class='produto-carrinho' id='livro" + livro.id + "'>" + 
+                                    "<div class='imagem-carrinho'>" +
                                         "<img src='" + livro.capa + "'>" + 
-                                    "</td>" + 
-                                    "<td class='nome-livro'>" +
+                                    "</div>" + 
+                                    "<div class='nome-livro-carrinho'>" +
                                         "<span>" + livro.titulo + "</span>" + 
-                                    "</td>" +
-                                    "<td class='preco'>" +
+                                    "</div>" +
+                                    "<div class='preco-carrinho'>" +
                                             "<span> R$ " + livro.preco + "</span>" +
-                                        "</td>" +
-                                    "<td class='quantidade'>" + 
-                                        "<span>" + 2 + "</span>" +
-                                    "</td>" +
-                                    "<td class='subtotal'>" + 
-                                        "<span>R$ " + (((parseFloat(livro.preco.replace(',', '.')))*2).toFixed(2)).toString().replace('.', ',') + "</span>" +
-                                    "</td>" +
-                                    "<td class='add-carrinho'>" +
+                                        "</div>" +
+                                    "<div class='quantidade-carrinho'>" + 
+                                        "<div class='menos-qtde'><span>-</span></div><div><span>" + 2 + "</span></div><div class='mais-qtde'><span>+</span></div>" +
+                                    "</div>" +
+                                    "<div class='subtotal-carrinho'>" + 
+                                        "<span>R$ " + (subtotal.toFixed(2)).toString().replace('.', ',') + "</span>" +
+                                    "</div>" +
+                                    "<div class='remover-carrinho'>" +
                                         "<a onclick='removerCarrinho(" + livro.id + ");' href='#'><span class='texto-carrinho'>x</span></a>" +
-                                    "</td>" +
-                                "</tr>";
+                                    "</div>" +
+                                "</div>";
                         $("#lista-carrinho").append(item);
                     });
+                    $("#total").append(total.toFixed(2).toString().replace('.', ','));
                 });
             </script>
     </section>
