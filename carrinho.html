@@ -61,7 +61,7 @@
                                 <a href="index.html">Comprar mais produtos</a>
                             </div>                      
                             <div id="confirmar-compra">
-                                <a href="#">Finalizar Pedido</a>
+                                <a onclick='removerCarrinho(" + livro.id + ");' href="#">Finalizar Pedido</a>
                             </div>
                         </div>
                     </div>
@@ -90,13 +90,13 @@
                                             "<span> R$ " + livro.preco + "</span>" +
                                         "</div>" +
                                     "<div class='quantidade-carrinho'>" + 
-                                        "<div class='menos-qtde'><span>-</span></div><div><span>" + 2 + "</span></div><div class='mais-qtde'><span>+</span></div>" +
+                                        "<div class='menos-qtde'><a>-</a></div><div><span>" + 2 + "</span></div><div class='mais-qtde'><a>+</a></div>" +
                                     "</div>" +
                                     "<div class='subtotal-carrinho'>" + 
                                         "<span>R$ " + (subtotal.toFixed(2)).toString().replace('.', ',') + "</span>" +
                                     "</div>" +
                                     "<div class='remover-carrinho'>" +
-                                        "<a onclick='removerCarrinho(" + livro.id + ");' href='#'><span class='texto-carrinho'>x</span></a>" +
+                                        "<a onclick='removerCarrinho(" + livro.id + ");'><span class='texto-carrinho'>x</span></a>" +
                                     "</div>" +
                                 "</div>";
                         $("#lista-carrinho").append(item);

@@ -161,6 +161,7 @@ div.add-carrinho {
 div.add-carrinho a {
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }
 
 div.texto-carrinho {
@@ -261,6 +262,10 @@ div.preco {
 .mais-qtde{
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+.remover-carrinho a, .quantidade-carrinho a{
+    cursor: pointer;
 }
 
 #finalizacao-compra {
