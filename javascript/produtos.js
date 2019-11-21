@@ -6,7 +6,7 @@ if (escolhidos == null) {
 }            
 
 $(document).ready(function (){
-    $('#qtdeCart').html(carrinhoCompras.length);
+    $('#qtdeCart').html(quantidadeItens());
     
     $.getJSON('json/loja.json', function(data) {
         var item;
@@ -35,14 +35,52 @@ $(document).ready(function (){
 });
 
 function adicionarCarrinho(id) {
-    var itemAdicionado = id;
+    var i = 0;
+    var existe = false;
+    if (carrinhoCompras.length != 0) {
+        if(existeItemCarrinho(id) == -1) {
+            adicionarLivro(id);
+        } else {
+            adicionarQuantidade(existeItemCarrinho(id));
+        }
+    } else {
+        adicionarLivro(id);
+    }
+    console.log(carrinhoCompras);
+    $('#qtdeCart').html(quantidadeItens());
+    localStorage.setItem("escolhidos",JSON.stringify(carrinhoCompras)); 
+}
+
+function quantidadeItens() {
+    var totalItens = 0;
+    var i = 0;
+    for(i = 0; i < carrinhoCompras.length; i++) {
+        totalItens += carrinhoCompras[i].quantidade;
+    }
+    return totalItens;
+}
+
+function existeItemCarrinho(id) {
+    var i = 0;
+    for(i = 0; i < carrinhoCompras.length; i++) {
+        if(id == carrinhoCompras[i].id) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+function adicionarLivro(id) {
     $.getJSON('json/loja.json', function (data) {
         $.each(data, function(index, livro) {
-            if(livro.id == itemAdicionado) {
-                carrinhoCompras.push(livro);
-                $('#qtdeCart').html(carrinhoCompras.length);
-                localStorage.setItem("escolhidos",JSON.stringify(carrinhoCompras));                 
+            if(livro.id == id) {
+                livro.quantidade = 1;
+                carrinhoCompras.push(livro);               
             }
         });
     });
+}
+
+function adicionarQuantidade(posicao) {
+    carrinhoCompras[posicao].quantidade++;
 }

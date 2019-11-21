@@ -5,6 +5,7 @@
     "autor": "Miguel de Cervantes",
     "paginas": "1605",
     "preco": "34,90",
+    "quantidade": "",
     "capa": "images/dom_quixote.jpg"
   },
 
@@ -14,6 +15,7 @@
     "autor": "Leon Tolstoi",
     "paginas": "1869",
     "preco": "30,90",
+    "quantidade": "",
     "capa": "images/guerra_paz.jpg"
   },
 
@@ -24,6 +26,7 @@
     "autor": "Thomas Mann",
     "paginas": "1924",
     "preco": "94,90",
+    "quantidade": "",
     "capa": "images/montanha_magica.jpg"
   },
 
@@ -34,6 +37,7 @@
     "autor": "Gabriel García Márquez",
     "paginas": "1967",
     "preco": "59,90",
+    "quantidade": "",
     "capa": "images/cem_anos_solidao.jpg"
 
   },
@@ -44,6 +48,7 @@
     "autor": "James Joyce",
     "paginas": "1922",
     "preco": "129,90",
+    "quantidade": "",
     "capa": "images/ulisses.jpg"
   },
 
@@ -53,6 +58,7 @@
     "autor": " Marcel Proust",
     "paginas": "1913",
     "preco": "20,90",
+    "quantidade": "",
     "capa": "images/busca_tempo_perdido.jpg"
   },
 
@@ -62,6 +68,7 @@
     "autor": "Dante Alighieri",
     "paginas": "1321",
     "preco": "115,00",
+    "quantidade": "",
     "capa": "images/divina_comedia.jpg"
   }
 
