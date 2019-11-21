@@ -63,40 +63,6 @@
                 </div>
             </div>
         </div>
-        <script>
-                /*$.getJSON('json/loja.json', function(data) {
-                    var item;
-                    var total = 0.0;
-                    var subtotal = 0.0;
-                    
-                    $.each(data, function(i, livro) {
-                        subtotal = ((parseFloat(livro.preco.replace(',', '.')))*2);
-                        total += subtotal;
-                        item = "<div class='produto-carrinho' id='livro" + livro.id + "'>" + 
-                                    "<div class='imagem-carrinho'>" +
-                                        "<img src='" + livro.capa + "'>" + 
-                                    "</div>" + 
-                                    "<div class='nome-livro-carrinho'>" +
-                                        "<span>" + livro.titulo + "</span>" + 
-                                    "</div>" +
-                                    "<div class='preco-carrinho'>" +
-                                            "<span> R$ " + livro.preco + "</span>" +
-                                        "</div>" +
-                                    "<div class='quantidade-carrinho'>" + 
-                                        "<div class='menos-qtde'><a>-</a></div><div><span class='num-qtde'>" + 2 + "</span></div><div class='mais-qtde'><a>+</a></div>" +
-                                    "</div>" +
-                                    "<div class='subtotal-carrinho'>" + 
-                                        "<span>R$ " + (subtotal.toFixed(2)).toString().replace('.', ',') + "</span>" +
-                                    "</div>" +
-                                    "<div class='remover-carrinho'>" +
-                                        "<a onclick='removerCarrinho(" + livro.id + ");'><span class='texto-remover'>x</span></a>" +
-                                    "</div>" +
-                                "</div>";
-                        $("#lista-carrinho").append(item);
-                    });
-                    $("#total").append(total.toFixed(2).toString().replace('.', ','));
-                });*/
-            </script>
     </section>
     <footer>
         <div id="rodape">
