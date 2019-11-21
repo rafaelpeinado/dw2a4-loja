@@ -25,8 +25,8 @@ $(document).ready(function (){
                         "<div class='preco'>" + 
                             "<span> R$ " + livro.preco + "</span>" +
                         "</div>" +
-                        "<div id='livro" + livro.id + "' class='add-carrinho'>" +
-                           "<a onclick='adicionarCarrinho(" + livro.id + ");'><span class='texto-carrinho'>Adicionar ao carrinho</span></a>" +
+                        "<div onclick='adicionarCarrinho(" + livro.id + ");' class='add-carrinho'>" +
+                           "<a><span class='texto-carrinho'>Adicionar ao carrinho</span></a>" +
                         "</div>" +
                     "</div>";
             $("#index").append(item);

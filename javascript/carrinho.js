@@ -23,8 +23,8 @@ $(document).ready(function (){
                                     "<div class='subtotal-carrinho'>" + 
                                         "<span>R$ " + (subtotal.toFixed(2)).toString().replace('.', ',') + "</span>" +
                                     "</div>" +
-                                    "<div class='remover-carrinho'>" +
-                                        "<a href='carrinho.html' onclick='removerCarrinho(" + livro.id + ");'><span class='texto-remover'>x</span></a>" +
+                                    "<div  onclick='removerCarrinho(" + livro.id + ");' class='remover-carrinho'>" +
+                                        "<a href='carrinho.html'><span class='texto-remover'>x</span></a>" +
                                     "</div>" +
                                 "</div>";
                         $("#lista-carrinho").append(item);
@@ -49,12 +49,3 @@ function removerCarrinho(id) {
     localStorage.setItem("escolhidos",JSON.stringify(novaLista));
     alert("Item removido!"); 
 }
-
-function procurarItem(id) {
-
-}
-
-$(document).ready(function() {
-    var escolhidos = JSON.parse(localStorage.getItem("escolhidos"));
-    console.log(escolhidos[0].id);
-});
