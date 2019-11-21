@@ -1,4 +1,4 @@
-function adicionarCarrinho(id) {
+/*function adicionarCarrinho(id) {
     $.getJSON('json/loja.json', function (data) {
         $.each(data, function (i, livro) {
             if (livro.id == id) {
@@ -9,4 +9,4 @@ function adicionarCarrinho(id) {
             }
         });
     });
-}
+}*/

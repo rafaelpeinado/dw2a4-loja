@@ -6,8 +6,10 @@
     <title>Carrinho</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
-    <script src="javascript/javascript.js"></script>
     <script src="jquery/jquery-3.4.1.min.js"></script>
+    <script src="javascript/javascript.js"></script>
+    <script src="javascript/carrinho.js"></script>
+
 </head>
 <body>
     <header>
@@ -51,7 +53,7 @@
                                     <a href="index.html">Comprar mais produtos</a>
                                 </div>                      
                                 <div id="confirmar-compra">
-                                    <a onclick='removerCarrinho(" + livro.id + ");' href="#">Finalizar Pedido</a>
+                                    <a onclick='finalizar();' href="index.html">Finalizar Pedido</a>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +64,7 @@
             </div>
         </div>
         <script>
-                $.getJSON('json/loja.json', function(data) {
+                /*$.getJSON('json/loja.json', function(data) {
                     var item;
                     var total = 0.0;
                     var subtotal = 0.0;
@@ -93,7 +95,7 @@
                         $("#lista-carrinho").append(item);
                     });
                     $("#total").append(total.toFixed(2).toString().replace('.', ','));
-                });
+                });*/
             </script>
     </section>
     <footer>

@@ -6,8 +6,9 @@
     <title>Página Inicial</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
-    <script src="javascript/javascript.js"></script>
     <script src="jquery/jquery-3.4.1.min.js"></script>
+    <script src="javascript/javascript.js"></script>
+    <script src="javascript/produtos.js"></script>
 </head>
 <body>
     <header>
@@ -20,7 +21,7 @@
                 <button id="botao-busca"><img src="images/lupa.png"></button>
             </div>
             <div>
-                <a href="carrinho.html"><img id="cart" src="images/cart.png"></a>
+                <a id="salvarCarrinho" href="carrinho.html"><img id="cart" src="images/cart.png"></a>
                 <span id="qtdeCart">0</span>
             </div>
         </div>
@@ -58,8 +59,8 @@
                                 "<div class='preco'>" + 
                                     "<span> R$ " + livro.preco + "</span>" +
                                 "</div>" +
-                                "<div class='add-carrinho'>" +
-                                    "<a onclick='adicionarCarrinho(" + livro.id + ");'><span class='texto-carrinho'>Adicionar ao carrinho</span></a>" +
+                                "<div id='livro" + livro.id + "' class='add-carrinho'>" +
+                                   "<a onclick='adicionarCarrinho(" + livro.id + ");'><span class='texto-carrinho'>Adicionar ao carrinho</span></a>" +
                                 "</div>" +
                             "</div>";
                     $("#index").append(item);
