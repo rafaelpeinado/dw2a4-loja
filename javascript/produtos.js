@@ -46,9 +46,6 @@ function adicionarCarrinho(id) {
     } else {
         adicionarLivro(id);
     }
-    console.log(carrinhoCompras);
-    $('#qtdeCart').html(quantidadeItens());
-    localStorage.setItem("escolhidos",JSON.stringify(carrinhoCompras)); 
 }
 
 function quantidadeItens() {
@@ -75,7 +72,8 @@ function adicionarLivro(id) {
         $.each(data, function(index, livro) {
             if(livro.id == id) {
                 livro.quantidade = 1;
-                carrinhoCompras.push(livro);               
+                carrinhoCompras.push(livro);    
+                atualizarCarrinho();           
             }
         });
     });
@@ -83,4 +81,10 @@ function adicionarLivro(id) {
 
 function adicionarQuantidade(posicao) {
     carrinhoCompras[posicao].quantidade++;
+    atualizarCarrinho();
+}
+
+function atualizarCarrinho() {
+    $('#qtdeCart').html(quantidadeItens());
+    localStorage.setItem("escolhidos",JSON.stringify(carrinhoCompras)); 
 }

@@ -5,7 +5,7 @@ $(document).ready(function (){
     var total = 0.0;
     var subtotal = 0.0;
     $.each(escolhidos, function (index, livro){
-        subtotal = ((parseFloat(livro.preco.replace(',', '.'))));
+        subtotal = ((parseFloat(livro.preco.replace(',', '.'))) * parseInt(livro.quantidade));
                         total += subtotal;
                         item = "<div class='produto-carrinho' id='livro" + livro.id + "'>" + 
                                     "<div class='imagem-carrinho'>" +
@@ -24,7 +24,7 @@ $(document).ready(function (){
                                         "<span>R$ " + (subtotal.toFixed(2)).toString().replace('.', ',') + "</span>" +
                                     "</div>" +
                                     "<div class='remover-carrinho'>" +
-                                        "<a onclick='removerCarrinho(" + livro.id + ");'><span class='texto-remover'>x</span></a>" +
+                                        "<a href='carrinho.html' onclick='removerCarrinho(" + livro.id + ");'><span class='texto-remover'>x</span></a>" +
                                     "</div>" +
                                 "</div>";
                         $("#lista-carrinho").append(item);
@@ -36,3 +36,25 @@ function finalizar() {
     localStorage.setItem("escolhidos", null);
     alert("Pedido finalizado!");
 }
+
+function removerCarrinho(id) {
+    var i = 0;
+    var novaLista = [];
+    var escolhidos = JSON.parse(localStorage.getItem("escolhidos"));
+    for(i = 0; i < escolhidos.length; i++){
+        if(id != escolhidos[i].id){
+            novaLista.push(escolhidos[i]);
+        }
+    }
+    localStorage.setItem("escolhidos",JSON.stringify(novaLista));
+    alert("Item removido!"); 
+}
+
+function procurarItem(id) {
+
+}
+
+$(document).ready(function() {
+    var escolhidos = JSON.parse(localStorage.getItem("escolhidos"));
+    console.log(escolhidos[0].id);
+});
