@@ -44,26 +44,6 @@ div#geral {
     width: auto;
 }
 
-#busca {
-    height: 29px;
-    padding: 5px;
-    margin: 13px 0px;
-    width: 75%;
-}
-
-#botao-busca {
-    height: 39px;
-    margin: 13px 0px;
-    text-align: center;
-    padding: 0px;
-}
-
-#botao-busca img{
-    height: 14px;
-    width: 14px;
-    text-align: center;
-}
-
 #cart {
     height: auto;
     width: 33px;
@@ -222,6 +202,16 @@ div.preco {
     display: grid;
     grid-template-columns: 2fr 3.5fr 2fr 2fr 2fr 0.5fr;
     border: 1px solid #EFEFEF;
+}
+
+div.produto-carrinho a {
+    text-decoration: none;
+    color: #CCC;
+}
+
+div.produto-carrinho a:hover {
+    background-color: #EFEFEF;
+    color: black;
 }
 
 #lista-detalhes {
